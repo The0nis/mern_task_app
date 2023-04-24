@@ -3,12 +3,9 @@ const Task = require("../model/taskModel");
 const router = express.Router();
 
 //CREATE A TASK
-//app.post("/api/tasks",logger, async (req, res) => {
 router.post("/api/tasks", async (req, res) => {
-  // console.log(req.body)
-  // res.send("Task created")
-
-  //SAVE THE TASK TO THE DATABASE
+ 
+    //SAVE THE TASK TO THE DATABASE
   try {
     const task = await Task.create(req.body);
     res.status(200).json(task);
