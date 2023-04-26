@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
 const taskRoutes = require("./routes/taskRoutes")
 
@@ -25,5 +26,4 @@ mongoose
         app.listen(PORT, () => {
             console.log(`Server running on port ${PORT}`);
         });
-    })
-    .catch((err) => console.log(err));
+    }).catch((err) => console.log(err));
